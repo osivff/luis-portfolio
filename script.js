@@ -5,3 +5,18 @@ const link = document.querySelector('a');
 menuBtn.addEventListener('click', (e) => {
     navBar.classList.toggle('active');
 })
+
+
+const footer = document.querySelector('footer');
+
+window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY + window.innerHeight;
+    const pageHeight = document.body.offsetHeight;
+
+    // If we're within 100px of the bottom, start fading out
+    if (scrollPos >= pageHeight - 100) {
+        footer.classList.add('fade-out');
+    } else {
+        footer.classList.remove('fade-out');
+    }
+});

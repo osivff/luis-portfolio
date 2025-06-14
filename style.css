@@ -91,6 +91,12 @@ footer {
     position: fixed;
     bottom: 0;
     font-size: 1.2rem;
+    transition: opacity 0.4s ease;
+    opacity: 1;
+}
+
+footer.fade-out {
+    opacity: 0;
 }
 
 

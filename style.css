@@ -145,6 +145,7 @@ footer.fade-out {
     header {
         flex: 1;
         margin-left: 2em;
+        height: auto;
     }
 
     #menu {
@@ -209,6 +210,7 @@ footer.fade-out {
 
     main {
         flex: 4;
+        padding-bottom: 0;
     }
 
     .container-main {
@@ -268,14 +270,16 @@ footer.fade-out {
         inset: 0;
         object-fit: cover;
         transition: transform 3s ease;
-        z-index: 1;
-    }
-
-    .col:hover img {
+        z-index: 1;background-color: rgb(255, 255, 255);
         transform: scale(1.1);
     }
 
+
     /* <----![[[foooterr]]]>----?!> */
+
+    footer {
+        height: 5%;
+    }
 
     footer.fade-out {
         opacity: 1;

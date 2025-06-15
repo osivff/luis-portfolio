@@ -8,6 +8,10 @@ header, main, footer {
     padding: 1em;
 }
 
+.social-media {
+    display: none;
+}
+
 .line {
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.339);
@@ -72,18 +76,24 @@ main {
     padding-bottom: 12vh;
 }
 
-/* .row {
-    display: flex;
-    flex-direction: column;
-} */
-
 .col {
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 
-img {
+.col .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.37);
+    z-index: 2;
+    opacity: 0;
+}
+
+.col img {
     width: 100%;
-    
+    z-index: 1; 
+    object-fit: cover;
 }
 
 
@@ -113,6 +123,13 @@ footer.fade-out {
 /* <!!!---...  [[[Big Screeen]]] ----!!-> */
 
 @media (min-width: 860px) {
+
+    .line {
+        display: none;
+    }
+
+    /* <<----[[Header]] ----!> */
+
     #name {
         font-size: 3rem;
         letter-spacing: 0;
@@ -120,18 +137,9 @@ footer.fade-out {
 
     #sub-title {
         display: inline-block;
+        line-height: 1.5;
         font-size: 1.3rem;
-        color:rgba(97, 97, 97, 0.786);
-    }
-    
-    .wrapper {
-        display: flex;
-        justify-content: space-between;
-        margin: 2em;
-    }
-
-    main {
-        flex: 4;
+        color:rgba(65, 65, 65, 0.786);
     }
 
     header {
@@ -161,6 +169,48 @@ footer.fade-out {
         color:rgb(0, 0, 0);
     }
 
+    .social-media {
+        display: block;
+        margin-top: 2em;
+    }
+
+    .social-media ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 25%;
+    }
+
+    .social-media a img {
+        width: 30px;
+        height: 30px;
+        opacity: .5;
+        transition: opacity 0.2s ease-in-out;
+        transition: transform  0.2s ease-in-out;
+    }
+
+    .social-media ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .social-media a:hover img {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    
+    /* <----![[[``main content``]]]]=====> */
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 2em;
+    }
+
+    main {
+        flex: 4;
+    }
+
     .container-main {
         display: flex;
         flex-direction: column;
@@ -168,7 +218,7 @@ footer.fade-out {
         align-items: baseline;
     }
 
-    .title-main {
+    .title-main { 
         width: 100%;
         font-size: 1.3rem;
         padding-left: 1.5%;
@@ -180,6 +230,8 @@ footer.fade-out {
         width: 80%;
         justify-content: space-around;
     }
+
+    /* ----- ||Overlay effect||-----> */
 
     .col {
         width: 500px;
@@ -223,7 +275,9 @@ footer.fade-out {
         transform: scale(1.1);
     }
 
-    .line {
-        display: none;
-    }
+    /* <----![[[foooterr]]]>----?!> */
+
+    footer.fade-out {
+        opacity: 1;
+    }   
 }

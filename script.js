@@ -1,13 +1,11 @@
 const menuBtn = document.querySelector('#menu');
 const navBar = document.querySelector('.nav-bar');
 const link = document.querySelector('a');
+const footer = document.querySelector('footer');
 
 menuBtn.addEventListener('click', (e) => {
     navBar.classList.toggle('active');
 })
-
-
-const footer = document.querySelector('footer');
 
 window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY + window.innerHeight;
@@ -20,3 +18,4 @@ window.addEventListener('scroll', () => {
         footer.classList.remove('fade-out');
     }
 });
+

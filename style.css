@@ -43,10 +43,9 @@ a:focus {
     justify-content: space-between;
     align-items: baseline;
 }
-
+/* 
 #menu > a {
-    color: rgb(0, 0, 0);
-}
+} */
 
 #menu {
     display: inline-block;
@@ -63,10 +62,6 @@ a:focus {
 }
 
 /* --->>>[[[[Main]]]<<<----! */
-
-main {
-    height: 80vh;
-}
 
 .row {
     display: flex;
@@ -91,7 +86,7 @@ footer {
     position: fixed;
     bottom: 0;
     font-size: 1.2rem;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.6s ease;
     opacity: 1;
 }
 

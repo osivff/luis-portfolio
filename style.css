@@ -117,6 +117,12 @@ footer.fade-out {
         font-size: 3rem;
         letter-spacing: 0;
     }
+
+    #sub-title {
+        display: inline-block;
+        font-size: 1.3rem;
+        color:rgba(97, 97, 97, 0.786);
+    }
     
     .wrapper {
         display: flex;
@@ -135,12 +141,6 @@ footer.fade-out {
 
     #menu {
         display: none;
-    }
-
-    #sub-title {
-        display: inline-block;
-        font-size: 1.3rem;
-        color:rgba(0, 0, 0, 0.62);
     }
 
     .nav-bar {
@@ -181,18 +181,49 @@ footer.fade-out {
         justify-content: space-around;
     }
 
-    image {
-        max-width: 100%;
-        object-fit: contain;
+    .col {
+        width: 500px;
+        height: 340px;
+        position: relative;
+        overflow: hidden;
+        margin: 1rem;
     }
 
-    .col {
-        box-sizing: border-box;
-        width: 500px;
-        margin: 1rem;
+    .overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        font-size: 1.4rem;
+        font-weight: 600;
+
+        background-color: rgba(0, 0, 0, 0.37);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+    }
+
+    .overlay:hover {
+        background-color: rgba(0, 0, 0, 0.37);
+        opacity: 1;
+    }
+
+    img {
+        inset: 0;
+        object-fit: cover;
+        transition: transform 3s ease;
+        z-index: 1;
+    }
+
+    .col:hover img {
+        transform: scale(1.1);
     }
 
     .line {
         display: none;
-    }   
+    }
 }

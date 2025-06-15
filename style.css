@@ -1,11 +1,12 @@
 body {
-font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+    font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+    margin: 0;
 }
 
 /* <<---- Small Screeen!!! -----> */
 
-header, main, footer {
-    padding: 1em;
+header, main {
+    padding: 2em;
 }
 
 .social-media {
@@ -95,6 +96,34 @@ main {
     z-index: 1; 
     object-fit: cover;
 }
+
+/* about me style */
+
+.portrait img {
+    object-fit: contain;
+}
+
+.about-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-me img{
+    width: 35px;
+    height: 35px;
+}
+
+.contact-me ul {
+    margin: 0;
+    padding: 0;
+    width: 65%;
+}
+
+.contact-me li span{
+    display: flex;
+    align-items: center;
+}
+
 
 
 /* [[[---- Foooterr ----]]]]>> */
@@ -271,14 +300,65 @@ footer.fade-out {
         object-fit: cover;
         transition: transform 3s ease;
         z-index: 1;background-color: rgb(255, 255, 255);
+    }
+
+    .col:hover img {
         transform: scale(1.1);
     }
 
+    /* About me content */
+
+    .about-flex-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .about-flex-wrapper img {
+        height: 520px;
+        aspect-ratio: auto;
+    }
+
+    .about-bio {
+        padding-right: 5em;
+    }
+
+    .about-bio {
+        width: 50%;
+        font-size: 1.2rem;
+    }
+
+    .about-bio h2 {
+        font-size: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    #role {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    .about-bio span {
+        display: block;
+        font-size: 1.3rem;
+        color: rgba(0, 0, 0, 0.527);
+    }
+
+    .about-bio .education {
+        font-weight: 600;
+    }
+
+    .about-bio .education + span {
+     color: rgb(0, 0, 0);   
+    }
 
     /* <----![[[foooterr]]]>----?!> */
 
     footer {
-        height: 5%;
+        height: 2%;
+        padding: 1em;
+        z-index: 1;
     }
 
     footer.fade-out {

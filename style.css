@@ -2,7 +2,7 @@ body {
 font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
 }
 
-/* <<---- Small Screeen!!! */
+/* <<---- Small Screeen!!! -----> */
 
 header, main, footer {
     padding: 1em;
@@ -47,6 +47,10 @@ a:focus {
     align-items: baseline;
 }
 
+#sub-title {
+    display: none;
+}
+
 
 #menu {
     display: inline-block;
@@ -68,13 +72,18 @@ main {
     padding-bottom: 12vh;
 }
 
-.row {
+/* .row {
     display: flex;
     flex-direction: column;
+} */
+
+.col {
+    box-sizing: border-box;
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
+    
 }
 
 
@@ -102,3 +111,88 @@ footer.fade-out {
 
 
 /* <!!!---...  [[[Big Screeen]]] ----!!-> */
+
+@media (min-width: 860px) {
+    #name {
+        font-size: 3rem;
+        letter-spacing: 0;
+    }
+    
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 2em;
+    }
+
+    main {
+        flex: 4;
+    }
+
+    header {
+        flex: 1;
+        margin-left: 2em;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #sub-title {
+        display: inline-block;
+        font-size: 1.3rem;
+        color:rgba(0, 0, 0, 0.62);
+    }
+
+    .nav-bar {
+        display: block;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    a {
+        font-weight: 100;
+        color:rgba(0, 0, 0, 0.352);
+        transition: color 0.5s ease-in-out;
+    }
+
+    a:hover {
+        color:rgb(0, 0, 0);
+    }
+
+    .container-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .title-main {
+        width: 100%;
+        font-size: 1.3rem;
+        padding-left: 1.5%;
+        margin-bottom: 1em;
+    }
+
+    .row {
+        display: flex;
+        width: 80%;
+        justify-content: space-around;
+    }
+
+    image {
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .col {
+        box-sizing: border-box;
+        width: 500px;
+        margin: 1rem;
+    }
+
+    .line {
+        display: none;
+    }   
+}

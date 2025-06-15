@@ -125,6 +125,26 @@ main {
     align-items: center;
 }
 
+.about-bio h2 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+#role {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.about-bio span {
+    display: block;
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.527);
+}
+.about-bio .education {
+    font-weight: 600;
+}
+.about-bio .education + span {
+ color: rgb(0, 0, 0);   
+}
 
 
 /* [[[---- Foooterr ----]]]]>> */
@@ -321,38 +341,10 @@ footer.fade-out {
 
     .about-bio {
         padding-right: 5em;
-    }
-
-    .about-bio {
         width: 50%;
         font-size: 1.2rem;
     }
-
-    .about-bio h2 {
-        font-size: 2rem;
-        margin: 0;
-        padding: 0;
-    }
-
-    #role {
-        font-size: 1.4rem;
-        font-weight: 500;
-    }
-
-    .about-bio span {
-        display: block;
-        font-size: 1.3rem;
-        color: rgba(0, 0, 0, 0.527);
-    }
-
-    .about-bio .education {
-        font-weight: 600;
-    }
-
-    .about-bio .education + span {
-     color: rgb(0, 0, 0);   
-    }
-
+    
     /* contact me section */
 
     .contact-me ul{
@@ -369,7 +361,7 @@ footer.fade-out {
     /* <----![[[foooterr]]]>----?!> */
 
     footer {
-        height: 2%;
+        height: 2em;
         padding: 1em;
         z-index: 1;
     }
